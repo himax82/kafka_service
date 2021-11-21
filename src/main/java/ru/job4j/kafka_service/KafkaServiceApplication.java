@@ -10,8 +10,8 @@ import org.springframework.kafka.annotation.KafkaListener;
 @SpringBootApplication
 public class KafkaServiceApplication {
 
-    @KafkaListener(topics= {"pasport"})
-    public void msgListener(ConsumerRecord<String, String> input){
+    @KafkaListener(topics = {"pasport"})
+    public void msgListener(ConsumerRecord<String, String> input) {
         System.out.println("accepting " + input.key());
         System.out.println(input.value());
     }
